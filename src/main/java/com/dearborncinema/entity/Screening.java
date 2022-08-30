@@ -6,7 +6,7 @@ public class Screening {
 
     private Movie title;
 
-    private LocalDateTime time;
+    private LocalDateTime dateTime;
 
     public Movie getMovie() {
         return this.title;
@@ -17,11 +17,18 @@ public class Screening {
     }
 
     public LocalDateTime getShowtime() {
-        return this.time;
+        return this.dateTime;
     }
 
     public void setShowtime(LocalDateTime time) {
-        this.time = time;
+        this.dateTime = time;
+    }
+
+    public Screening() {}
+
+    public Screening(Movie movie, LocalDateTime time) {
+        this.title = movie;
+        this.dateTime = time;
     }
 
 }

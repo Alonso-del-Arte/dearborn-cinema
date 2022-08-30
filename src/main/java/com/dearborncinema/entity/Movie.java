@@ -1,7 +1,7 @@
 package com.dearborncinema.entity;
 
 import java.time.Duration;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Movie {
 
@@ -13,7 +13,7 @@ public class Movie {
 
     private Duration runningTime;
 
-    private LocalDateTime releaseDate;
+    private LocalDate releaseDate;
 
     public String getTitle() {
         return this.title;
@@ -47,12 +47,23 @@ public class Movie {
         this.runningTime = duration;
     }
 
-    public LocalDateTime getReleaseDate() {
+    public LocalDate getReleaseDate() {
         return this.releaseDate;
     }
 
-    public void setReleaseDate(LocalDateTime releaseDate) {
+    public void setReleaseDate(LocalDate releaseDate) {
         this.releaseDate = releaseDate;
+    }
+
+    public Movie() {}
+
+    public Movie(String title, MPAARating rating, String ratingReason,
+                 Duration duration, LocalDate premiereDate) {
+        this.title = title;
+        this.mpaaRating = rating;
+        this.mpaaRatingReason = ratingReason;
+        this.runningTime = duration;
+        this.releaseDate = premiereDate;
     }
 
 }
