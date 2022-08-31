@@ -1,5 +1,6 @@
 package com.dearborncinema.entity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Screening {
@@ -20,8 +21,15 @@ public class Screening {
         return this.dateTime;
     }
 
-    public void setShowtime(LocalDateTime time) {
-        this.dateTime = time;
+    public void setShowtime(LocalDateTime rescheduledTime) {
+        LocalDate releaseDate = this.getMovie().getReleaseDate();
+        if (rescheduledTime.isBefore(releaseDate.atStartOfDay())) {
+            String excMsg = "Can't reschedule movie for a screening on "
+                    + rescheduledTime + " because its release date is "
+                    + releaseDate;
+            throw new IllegalArgumentException(excMsg);
+        }
+        this.dateTime = rescheduledTime;
     }
 
     public Screening() {
