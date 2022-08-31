@@ -24,9 +24,20 @@ public class Screening {
         this.dateTime = time;
     }
 
-    public Screening() {}
+    public Screening() {
+        this.title = new Movie();
+        this.dateTime = LocalDateTime.now();
+    }
 
     public Screening(Movie movie, LocalDateTime time) {
+        LocalDateTime releaseDate = movie.getReleaseDate().atStartOfDay();
+        if (time.isBefore(releaseDate)) {
+            String excMsg = "Can't schedule " + movie.getTitle()
+                    + " for a screening on " + time
+                    + ", which is before the movie's release date of "
+                    + releaseDate;
+            throw new IllegalArgumentException(excMsg);
+        }
         this.title = movie;
         this.dateTime = time;
     }

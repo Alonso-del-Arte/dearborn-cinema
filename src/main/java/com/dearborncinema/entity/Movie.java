@@ -55,7 +55,13 @@ public class Movie {
         this.releaseDate = releaseDate;
     }
 
-    public Movie() {}
+    public Movie() {
+        this.title = "Untitled";
+        this.mpaaRating = MPAARating.UNRATED;
+        this.mpaaRatingReason = "The MPAA has not reviewed this movie yet";
+        this.runningTime = Duration.ZERO;
+        this.releaseDate = LocalDate.now();
+    }
 
     public Movie(String title, MPAARating rating, String ratingReason,
                  Duration duration, LocalDate premiereDate) {
