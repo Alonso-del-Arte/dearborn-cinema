@@ -26,7 +26,7 @@ public class Screen {
 
     // TODO: Write tests for this
     public boolean add(Screening showtime) {
-        return false;
+        return true;
     }
 
     // TODO: Write tests for this
@@ -38,8 +38,11 @@ public class Screen {
         return this.capacity;
     }
 
-    // TODO: Write tests for this, such as that capacity can't be negative
     public void setCapacity(int numberOfSeats) {
+        if (numberOfSeats < 0) {
+            String excMsg = "Capacity must be positive, not " + numberOfSeats;
+            throw new IllegalArgumentException(excMsg);
+        }
         this.capacity = numberOfSeats;
     }
 

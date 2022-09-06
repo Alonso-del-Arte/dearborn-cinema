@@ -34,12 +34,26 @@ public class Screening {
 
     @Override
     public boolean equals(Object obj) {
-        return false;
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (!this.getClass().equals(obj.getClass())) {
+            return false;
+        }
+        Screening other = (Screening) obj;
+        if (!this.title.equals(other.title)) {
+            return false;
+        }
+        return this.dateTime.equals(other.dateTime);
     }
 
     @Override
     public int hashCode() {
-        return 0;
+        return (this.title.getTitle().hashCode() << 16)
+                + this.dateTime.hashCode();
     }
 
     public Screening() {

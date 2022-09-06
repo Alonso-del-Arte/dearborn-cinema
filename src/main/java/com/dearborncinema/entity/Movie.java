@@ -55,6 +55,12 @@ public class Movie {
         this.releaseDate = releaseDate;
     }
 
+    /**
+     * No argument constructor. This is provided almost only because of the
+     * Spring framework. This constructor initializes a <code>Movie</code>
+     * object with title <i>Untitled</i>, no MPAA rating or rating reason, a
+     * running time of zero minutes and a release date of today.
+     */
     public Movie() {
         this.title = "Untitled";
         this.mpaaRating = MPAARating.UNRATED;
@@ -63,6 +69,20 @@ public class Movie {
         this.releaseDate = LocalDate.now();
     }
 
+    /**
+     * Primary constructor. This is the constructor that should generally be
+     * used
+     * @param title The title of the movie. For example, <i>The Parent Trap</i>.
+     * @param rating The MPAA rating. For example, PG, parental guidance
+     *               suggested.
+     * @param ratingReason The reason for the MPAA rating. For example, "For
+     *                     some mild mischief". It may be the empty
+     *                     <code>String</code> in the case of G-rated movies.
+     * @param duration The running time. For example, 2 hours and 8 minutes.
+     * @param premiereDate The date the movie premiered or will premiere. If the
+     *                     movie has not premiered yet, it is considered
+     *                     unavailable for screening until it does premiere.
+     */
     public Movie(String title, MPAARating rating, String ratingReason,
                  Duration duration, LocalDate premiereDate) {
         this.title = title;

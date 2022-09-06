@@ -7,7 +7,7 @@ public class Cinema {
 
     private String name;
 
-    private Set<Screen> screens;
+    private Set<Screen> screens = new HashSet<>();
 
     public String getName() {
         return this.name;
@@ -19,6 +19,7 @@ public class Cinema {
 
     // TODO: Write tests for this
     public boolean add(Screen screen) {
+        this.screens.add(screen);
         return false;
     }
 
@@ -32,9 +33,12 @@ public class Cinema {
         return new HashSet<>();
     }
 
-    // TODO: Write tests for this
     public int getTotalCapacity() {
-        return Integer.MIN_VALUE;
+        int total = 0;
+        for (Screen screen : this.screens) {
+            total += screen.getCapacity();
+        }
+        return total;
     }
 
 }
