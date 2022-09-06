@@ -32,6 +32,16 @@ public class Screening {
         this.dateTime = rescheduledTime;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
+
     public Screening() {
         this.title = new Movie();
         this.dateTime = LocalDateTime.now();
