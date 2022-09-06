@@ -32,4 +32,9 @@ public class Cinema {
         return new HashSet<>();
     }
 
+    // TODO: Write tests for this
+    public int getTotalCapacity() {
+        return Integer.MIN_VALUE;
+    }
+
 }

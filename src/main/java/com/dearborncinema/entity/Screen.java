@@ -14,6 +14,8 @@ public class Screen {
 
     private Set<Screening> screenings;
 
+    private int capacity;
+
     public String getMarqueeID() {
         return this.marqueeID;
     }
@@ -30,6 +32,15 @@ public class Screen {
     // TODO: Write tests for this
     public Set<Screening> getScreenings() {
         return new HashSet<>();
+    }
+
+    public int getCapacity() {
+        return this.capacity;
+    }
+
+    // TODO: Write tests for this, such as that capacity can't be negative
+    public void setCapacity(int numberOfSeats) {
+        this.capacity = numberOfSeats;
     }
 
 }
