@@ -6,7 +6,14 @@ import java.util.List;
 
 public interface CinemaService {
 
-    // TODO: Write getAllCinemas(), getCinemaById(), addCinema(),
-    //  updateCinema(), deleteCinemaById()
+    List<Cinema> getAllCinemas();
+
+    Cinema getCinemaByID(int id);
+
+    Cinema addCinema(Cinema cinema);
+
+    Cinema updateCinema(Cinema cinema);
+
+    Cinema deleteCinemaByID(int id);
 
 }
