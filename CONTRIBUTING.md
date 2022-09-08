@@ -26,3 +26,6 @@ around.
   (unless it's to fix a defect).
 * Pull requests should address a TODO or FIXME comment in the source, or an open
   issue on GitHub.
+* As much as it is feasible, example movies should be actual movies that have 
+  been produced and released. If you "invent" a movie to use as an example or a 
+ joke, it should be something that would be rated G, PG, PG-13 or R.
