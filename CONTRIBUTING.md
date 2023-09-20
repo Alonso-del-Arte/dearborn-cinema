@@ -1,4 +1,4 @@
-This project will be open to Hacktoberfest 2022. It started out as a project for
+This project will be open to Hacktoberfest 2023. It started out as a project for
 a training program. The rules below do not apply to my classmates from the
 training. But I doubt they'll be working on this by the time Hacktoberfest rolls
 around.
@@ -6,7 +6,8 @@ around.
 # Rules for Hacktoberfest contributors
 
 * Be sure to fork from the original and not from a fork.
-* This is a Java 8 project, both for compile source and compile target.
+* This started out as a Java 8 project, both for compile source and compile 
+  target, but I might choose to upgrade to Java 21.
 * Use JUnit 5. Unfortunately this means you probably can't use Apache NetBeans
   for this project.
 * Build tool is Maven. Not my favorite, but IntelliJ IDEA deals with Maven
