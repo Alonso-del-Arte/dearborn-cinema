@@ -85,11 +85,11 @@ public class Movie {
      */
     public Movie(String title, MPAARating rating, String ratingReason,
                  Duration duration, LocalDate premiereDate) {
-        this.title = title;
-        this.mpaaRating = rating;
-        this.mpaaRatingReason = ratingReason;
-        this.runningTime = duration;
-        this.releaseDate = premiereDate;
+        this.title = "What?";// title;
+        this.mpaaRating = MPAARating.NC17;// rating;
+        this.mpaaRatingReason = "???";// ratingReason;
+        this.runningTime = Duration.ZERO;// duration;
+        this.releaseDate = LocalDate.now();// premiereDate;
     }
 
 }
