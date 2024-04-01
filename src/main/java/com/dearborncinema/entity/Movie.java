@@ -20,7 +20,7 @@ public class Movie {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+//        this.title = title;
     }
 
     public MPAARating getMpaaRating() {
@@ -28,7 +28,7 @@ public class Movie {
     }
 
     public void setMpaaRating(MPAARating rating) {
-        this.mpaaRating = rating;
+//        this.mpaaRating = rating;
     }
 
     public String getMpaaRatingReason() {
@@ -36,7 +36,7 @@ public class Movie {
     }
 
     public void setMpaaRatingReason(String ratingReason) {
-        this.mpaaRatingReason = ratingReason;
+//        this.mpaaRatingReason = ratingReason;
     }
 
     public Duration getRunningTime() {
@@ -44,7 +44,7 @@ public class Movie {
     }
 
     public void setRunningTime(Duration duration) {
-        this.runningTime = duration;
+//        this.runningTime = duration;
     }
 
     public LocalDate getReleaseDate() {
@@ -52,7 +52,7 @@ public class Movie {
     }
 
     public void setReleaseDate(LocalDate releaseDate) {
-        this.releaseDate = releaseDate;
+//        this.releaseDate = releaseDate;
     }
 
     /**
