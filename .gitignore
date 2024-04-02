@@ -38,3 +38,5 @@ build/
 ### Miscellaneous ###
 draft/
 secrets/
+/src/main/java/draft/
+/src/main/test/java/draft/
