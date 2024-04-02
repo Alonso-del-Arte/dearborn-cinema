@@ -1,13 +1,11 @@
 package com.dearborncinema.entity;
 
-import java.util.Random;
+import static com.dearborncinema.entity.MovieTest.RANDOM;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CinemaTest {
-
-    private static final Random RANDOM = new Random();
 
     @Test
     void testGetTotalCapacity() {

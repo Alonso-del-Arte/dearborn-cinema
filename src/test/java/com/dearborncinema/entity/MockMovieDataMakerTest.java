@@ -14,5 +14,5 @@ public class MockMovieDataMakerTest {
     void testMakeUpTitle() {
         fail("HAVEN'T WRITTEN TEST YET");
     }
-    
+
 }

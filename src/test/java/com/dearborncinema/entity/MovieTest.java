@@ -1,8 +1,18 @@
 package com.dearborncinema.entity;
 
+import java.util.Random;
+
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 class MovieTest {
+
+    static final Random RANDOM = new Random();
+
+//    @Test
+//    void testGetTitle() {
+//        fail("HAVEN'T WRITTEN TEST YET");
+//    }
 
     @Test
     void testNoNullFieldsFromNoArgConstructor() {

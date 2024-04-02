@@ -1,10 +1,11 @@
 package com.dearborncinema.entity;
 
+import static com.dearborncinema.entity.MovieTest.RANDOM;
+
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.Random;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -15,8 +16,6 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author Alonso del Arte
  */
 class ScreenTest {
-
-    private static final Random RANDOM = new Random();
 
     private static final LocalDate TOMORROW = LocalDate.now().plusDays(1);
 

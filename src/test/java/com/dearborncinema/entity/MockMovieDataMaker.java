@@ -27,7 +27,7 @@ public class MockMovieDataMaker {
 
     // TODO: Write tests for this
     public static LocalDate choosePremiereDate() {
-        return LocalDate.EPOCH;
+        return LocalDate.now();
     }
 
 }

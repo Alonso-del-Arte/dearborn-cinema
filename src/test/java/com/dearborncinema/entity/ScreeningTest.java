@@ -1,11 +1,12 @@
 package com.dearborncinema.entity;
 
+import static com.dearborncinema.entity.MovieTest.RANDOM;
+
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.HashSet;
-import java.util.Random;
 import java.util.Set;
 
 import org.junit.jupiter.api.Test;
@@ -16,8 +17,6 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author Alonso del Arte
  */
 class ScreeningTest {
-
-    private static final Random RANDOM = new Random();
 
     private static final String BLACK_SWAN_3_TITLE
             = "Black Swan 3: Back to the Lake";
