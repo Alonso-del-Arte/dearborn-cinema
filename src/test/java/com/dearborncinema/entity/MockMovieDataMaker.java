@@ -2,6 +2,7 @@ package com.dearborncinema.entity;
 
 import static com.dearborncinema.entity.MovieTest.RANDOM;
 
+import java.time.DayOfWeek;
 import java.time.Duration;
 import java.time.LocalDate;
 
@@ -41,7 +42,19 @@ public class MockMovieDataMaker {
             "the Serifs", "the Sith", "the Town Crier", "Underwood", "Voyager",
             "Walker", "Xanadu", "Yonkers", "Zorro"};
 
-    private static final int NUMBERS_OF_CHARACTER_NOUNS = CHARACTER_NOUNS.length;
+    private static final int NUMBERS_OF_CHARACTER_NOUNS
+            = CHARACTER_NOUNS.length;
+
+    static final LocalDate LAST_FRIDAY;
+
+    // TODO: Maybe refactor to use DayOfWeek ordinal
+    static {
+        LocalDate curr = LocalDate.now().minusDays(1);
+        while (curr.getDayOfWeek() != DayOfWeek.FRIDAY) {
+            curr = curr.minusDays(1);
+        }
+        LAST_FRIDAY = curr;
+    }
 
     public static String makeUpTitle() {
         String franchise
