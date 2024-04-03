@@ -1,5 +1,6 @@
 package com.dearborncinema.entity;
 
+import java.time.Duration;
 import java.util.Random;
 
 import org.junit.jupiter.api.Test;
@@ -9,10 +10,20 @@ class MovieTest {
 
     static final Random RANDOM = new Random();
 
-//    @Test
-//    void testGetTitle() {
-//        fail("HAVEN'T WRITTEN TEST YET");
-//    }
+    private static final String DEFAULT_RATING_REASON
+            = "For mild violence, sexual content";
+
+    private static final Duration DEFAULT_DURATION = Duration.ofMinutes(100);
+
+    @Test
+    void testGetTitle() {
+        String expected = MockMovieDataMaker.makeUpTitle();
+        Movie movie = new Movie(expected, MPAARating.UNRATED,
+                DEFAULT_RATING_REASON, DEFAULT_DURATION,
+                MockMovieDataMaker.LAST_FRIDAY);
+        String actual = movie.getTitle();
+        assertEquals(expected, actual);
+    }
 
     @Test
     void testNoNullFieldsFromNoArgConstructor() {
