@@ -85,7 +85,7 @@ public class Movie {
      */
     public Movie(String title, MPAARating rating, String ratingReason,
                  Duration duration, LocalDate premiereDate) {
-        this.title = "What?";// title;
+        this.title = title;
         this.mpaaRating = MPAARating.NC17;// rating;
         this.mpaaRatingReason = "???";// ratingReason;
         this.runningTime = Duration.ZERO;// duration;
