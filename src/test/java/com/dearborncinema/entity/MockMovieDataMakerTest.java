@@ -14,6 +14,7 @@ public class MockMovieDataMakerTest {
 
     @Test
     void testMakeUpTitle() {
+        System.out.println("makeUpTitle");
         int capacity = RANDOM.nextInt(32) + 8;
         Set<String> titles = new HashSet<>(capacity);
         for (int i = 0; i < capacity; i++) {
@@ -24,8 +25,6 @@ public class MockMovieDataMakerTest {
         String msg = "After calling makeUpTitle() " + capacity
                 + " times, should've gotten at least " + expected
                 + " distinct titles";
-        System.out.println(msg);
-        System.out.println(titles);
         assert expected <= actual : msg;
     }
 
