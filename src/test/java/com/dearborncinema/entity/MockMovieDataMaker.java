@@ -53,7 +53,7 @@ public class MockMovieDataMaker {
         while (curr.getDayOfWeek() != DayOfWeek.FRIDAY) {
             curr = curr.minusDays(1);
         }
-        LAST_FRIDAY = curr;
+        LAST_FRIDAY = LocalDate.now();// curr;
     }
 
     public static String makeUpTitle() {
