@@ -2,6 +2,7 @@ package com.dearborncinema.entity;
 
 import static com.dearborncinema.entity.MovieTest.RANDOM;
 
+import java.time.DayOfWeek;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -11,6 +12,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MockMovieDataMakerTest {
+
+    @Test
+    void testLastFriday() {
+        LocalDate expected = LocalDate.now();
+        do {
+            expected = expected.minusDays(1);
+        } while (expected.getDayOfWeek() != DayOfWeek.FRIDAY);
+        LocalDate actual = MockMovieDataMaker.LAST_FRIDAY;
+        assertEquals(expected, actual);
+    }
 
     @Test
     void testMakeUpTitle() {
