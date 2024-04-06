@@ -47,13 +47,12 @@ public class MockMovieDataMaker {
 
     static final LocalDate LAST_FRIDAY;
 
-    // TODO: Maybe refactor to use DayOfWeek ordinal
     static {
-        LocalDate curr = LocalDate.now().minusDays(1);
-        while (curr.getDayOfWeek() != DayOfWeek.FRIDAY) {
-            curr = curr.minusDays(1);
-        }
-        LAST_FRIDAY = curr;
+        LocalDate curr = LocalDate.now();
+        int ord = curr.getDayOfWeek().ordinal();
+        int adjust = (ord > 4) ? 7 : 0;
+        int daysToSubtract = ord + 3 - adjust;
+        LAST_FRIDAY = curr.minusDays(daysToSubtract);
     }
 
     public static String makeUpTitle() {
