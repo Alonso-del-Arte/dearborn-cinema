@@ -19,12 +19,12 @@ public class TimeUtils {
      * the previous Thursday from February 29, 2024 is February 22, 2024.
      */
     public static LocalDate previous(LocalDate origin, DayOfWeek day) {
-//        int originOrd = origin.getDayOfWeek().ordinal();
-//        int targetOrd = day.ordinal();
-//        int diff = originOrd - targetOrd;
-//        int adjust = (diff <= 0) ? 7 : 0;
-//        int daysToSubtract = diff + adjust;
-        return origin.minusDays(7);//.minusDays(daysToSubtract);
+        int originOrd = origin.getDayOfWeek().ordinal();
+        int targetOrd = day.ordinal();
+        int diff = originOrd - targetOrd;
+        int adjust = (diff <= 0) ? 7 : 0;
+        int daysToSubtract = diff + adjust;
+        return origin.minusDays(daysToSubtract);
     }
 
     // TODO: Write tests for this
