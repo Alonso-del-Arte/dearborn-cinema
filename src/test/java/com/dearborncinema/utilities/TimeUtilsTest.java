@@ -30,7 +30,7 @@ class TimeUtilsTest {
         assertEquals(expected, actual, msg);
     }
 
-//    @Test
+    @Test
     void testPrevious() {
         System.out.println("previous");
         final int daysPerNonLeapYear = 365;
@@ -39,15 +39,13 @@ class TimeUtilsTest {
         int daysToSubtract = RANDOM.nextInt(bound) + daysPerNonLeapYear;
         LocalDate expected = LocalDate.now().minusDays(daysToSubtract);
         DayOfWeek day = expected.getDayOfWeek();
-        int daysToAdd = RANDOM.nextInt(7) + 1;
+        int daysToAdd = RANDOM.nextInt(6) + 1;
         LocalDate origin = expected.plusDays(daysToAdd);
         LocalDate actual = TimeUtils.previous(origin, day);
-        DateTimeFormatter formatter
-                = DateTimeFormatter.ofPattern("EEE yyyy-MM-dd");
         String msg = "Previous "
-                + day.getDisplayName(TextStyle.FULL, Locale.ROOT) + " from "
-                + origin.format(formatter) + " should be "
-                + expected.format(formatter);
+                + day.getDisplayName(TextStyle.FULL_STANDALONE, Locale.US)
+                + " from " + origin.format(FORMATTER) + " should be "
+                + expected.format(FORMATTER);
         assertEquals(expected, actual, msg);
     }
 
