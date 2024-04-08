@@ -50,7 +50,7 @@ class TimeUtilsTest {
 
     @Test
     void testNext() {
-        System.out.println("previous");
+        System.out.println("next");
         final int daysPerNonLeapYear = 365;
         int numberOfYears = 9;
         int bound = numberOfYears * daysPerNonLeapYear;
