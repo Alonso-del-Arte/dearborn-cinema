@@ -9,7 +9,6 @@ import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import org.w3c.dom.Text;
 
 class TimeUtilsTest {
 
@@ -65,6 +64,18 @@ class TimeUtilsTest {
                 + day.getDisplayName(TextStyle.FULL_STANDALONE, Locale.US)
                 + " after " + origin.format(FORMATTER) + " should be "
                 + expected.format(FORMATTER);
+        assertEquals(expected, actual, msg);
+    }
+
+    @Test
+    void testNextSameDayOfWeekOneWeekAfter() {
+        LocalDate origin = LocalDate.now();
+        DayOfWeek day = origin.getDayOfWeek();
+        LocalDate expected = origin.plusDays(7);
+        LocalDate actual = TimeUtils.next(origin, day);
+        String msg = "Next "
+                + day.getDisplayName(TextStyle.FULL_STANDALONE, Locale.US)
+                + " after today should be " + expected.format(FORMATTER);
         assertEquals(expected, actual, msg);
     }
 
