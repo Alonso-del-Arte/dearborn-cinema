@@ -24,7 +24,7 @@ public class TimeUtils {
 //        int diff = originOrd - targetOrd;
 //        int adjust = (diff <= 0) ? 7 : 0;
 //        int daysToSubtract = diff + adjust;
-        return origin;//.minusDays(daysToSubtract);
+        return origin.minusDays(7);//.minusDays(daysToSubtract);
     }
 
     // TODO: Write tests for this
