@@ -1,6 +1,7 @@
 package com.dearborncinema.entity;
 
 import static com.dearborncinema.entity.MovieTest.RANDOM;
+import static com.dearborncinema.utilities.TimeUtils.previous;
 
 import java.time.DayOfWeek;
 import java.time.Duration;
@@ -45,15 +46,7 @@ public class MockMovieDataMaker {
     private static final int NUMBERS_OF_CHARACTER_NOUNS
             = CHARACTER_NOUNS.length;
 
-    static final LocalDate LAST_FRIDAY;
-
-    static {
-        LocalDate curr = LocalDate.now();
-        int ord = curr.getDayOfWeek().ordinal();
-        int adjust = (ord > 4) ? 7 : 0;
-        int daysToSubtract = ord + 3 - adjust;
-        LAST_FRIDAY = curr.minusDays(daysToSubtract);
-    }
+    static final LocalDate LAST_FRIDAY = previous(LocalDate.now(), DayOfWeek.FRIDAY);
 
     public static String makeUpTitle() {
         String franchise
