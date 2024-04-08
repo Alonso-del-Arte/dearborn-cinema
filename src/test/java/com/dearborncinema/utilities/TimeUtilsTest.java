@@ -49,4 +49,23 @@ class TimeUtilsTest {
         assertEquals(expected, actual, msg);
     }
 
+    @Test
+    void testNext() {
+        System.out.println("previous");
+        final int daysPerNonLeapYear = 365;
+        int numberOfYears = 9;
+        int bound = numberOfYears * daysPerNonLeapYear;
+        int daysToAdd = RANDOM.nextInt(bound) + daysPerNonLeapYear;
+        LocalDate expected = LocalDate.now().plusDays(daysToAdd);
+        DayOfWeek day = expected.getDayOfWeek();
+        int daysToSubtract = RANDOM.nextInt(6) + 1;
+        LocalDate origin = expected.minusDays(daysToSubtract);
+        LocalDate actual = TimeUtils.next(origin, day);
+        String msg = "Next "
+                + day.getDisplayName(TextStyle.FULL_STANDALONE, Locale.US)
+                + " after " + origin.format(FORMATTER) + " should be "
+                + expected.format(FORMATTER);
+        assertEquals(expected, actual, msg);
+    }
+
 }
