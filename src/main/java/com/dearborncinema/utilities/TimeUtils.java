@@ -29,7 +29,11 @@ public class TimeUtils {
 
     // TODO: Write tests for this
     public static LocalDate next(LocalDate origin, DayOfWeek day) {
-        return origin;
+        LocalDate curr = origin;
+        while (curr.getDayOfWeek() != day) {
+            curr = curr.plusDays(1);
+        }
+        return curr;
     }
 
 }
