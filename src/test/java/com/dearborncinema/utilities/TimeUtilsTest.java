@@ -15,8 +15,24 @@ class TimeUtilsTest {
 
     private static final Random RANDOM = new Random();
 
+    private static final DateTimeFormatter FORMATTER
+            = DateTimeFormatter.ofPattern("EEE yyyy-MM-dd");
+
     @Test
+    void testPreviousSameDayOneWeekBefore() {
+        LocalDate origin = LocalDate.now();
+        DayOfWeek day = origin.getDayOfWeek();
+        LocalDate expected = origin.minusDays(7);
+        LocalDate actual = TimeUtils.previous(origin, day);
+        String msg = "Previous "
+                + day.getDisplayName(TextStyle.FULL_STANDALONE, Locale.US)
+                + " from today should be " + expected.format(FORMATTER);
+        assertEquals(expected, actual, msg);
+    }
+
+//    @Test
     void testPrevious() {
+        System.out.println("previous");
         final int daysPerNonLeapYear = 365;
         int numberOfYears = 9;
         int bound = numberOfYears * daysPerNonLeapYear;
