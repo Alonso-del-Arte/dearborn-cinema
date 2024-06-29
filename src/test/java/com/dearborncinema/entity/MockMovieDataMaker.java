@@ -18,7 +18,7 @@ public class MockMovieDataMaker {
             "Under the Moon", "Vowel Thief", "Wild North", "Xenon Morphemes",
             "Young Sherlock Holmes", "Zoographer of Destiny"};
 
-    private static final int NUMBER_OF_FRANCHISES = FRANCHISE_NAMES.length;;
+    private static final int NUMBER_OF_FRANCHISES = FRANCHISE_NAMES.length;
 
     private static final String[] ROMAN_NUMERALS = {"I", "II", "III", "IV", "V",
             "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV",
@@ -50,6 +50,13 @@ public class MockMovieDataMaker {
             MPAARating.PG, MPAARating.PG13, MPAARating.R, MPAARating.NC17};
 
     private static final int NUMBER_OF_AVAILABLE_RATINGS = AVAILABLE_RATINGS.length;
+
+    private static final int FEATURE_FILM_MINIMUM_MINUTES = 77;
+
+    private static final int FEATURE_FILM_MAXIMUM_MINUTES = 150;
+
+    private static final int DURATION_RANGE = FEATURE_FILM_MAXIMUM_MINUTES
+            - FEATURE_FILM_MINIMUM_MINUTES;
 
     static final LocalDate LAST_FRIDAY = previous(LocalDate.now(), DayOfWeek.FRIDAY);
 
@@ -83,9 +90,16 @@ public class MockMovieDataMaker {
         return "SORRY, NOT IMPLEMENTED YET";
     }
 
-    // TODO: Write tests for this
+    /**
+     * Chooses a duration for a feature film in the arbitrary range of 77
+     * minutes to 150 minutes.
+     * @return At least 1 hour and 17 minutes, not more than 2 hours and 30
+     * minutes.
+     */
     public static Duration chooseDuration() {
-        return Duration.ZERO;
+        int amount = FEATURE_FILM_MINIMUM_MINUTES
+                + RANDOM.nextInt(DURATION_RANGE);
+        return Duration.ofMinutes(amount);
     }
 
     // TODO: Write tests for this
