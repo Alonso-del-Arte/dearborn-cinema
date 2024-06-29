@@ -81,4 +81,9 @@ public class MockMovieDataMaker {
         return LocalDate.now();
     }
 
+    // TODO: Write tests for this
+    public static Movie makeUpMovie() {
+        return new Movie();
+    }
+
 }
