@@ -39,4 +39,18 @@ public class MockMovieDataMakerTest {
         assert expected <= actual : msg;
     }
 
+    @Test
+    void testChooseRating() {
+        MPAARating[] ratings = MPAARating.values();
+        Set<MPAARating> expected = new HashSet<>(Set.of(MPAARating.G,
+                MPAARating.PG, MPAARating.PG13, MPAARating.R, MPAARating.NC17));
+        int size = expected.size();
+        Set<MPAARating> actual = new HashSet<>(size);
+        int totalNumberOfCalls = 16 * size;
+        for (int i = 0; i < totalNumberOfCalls; i++) {
+            actual.add(MockMovieDataMaker.chooseRating());
+        }
+        assertEquals(expected, actual);
+    }
+
 }
