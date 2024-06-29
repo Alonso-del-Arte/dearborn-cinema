@@ -7,11 +7,17 @@ around.
 
 * Be sure to fork from the original and not from a fork.
 * This started out as a Java 8 project, both for compile source and compile 
-  target, but I might choose to upgrade to Java 21.
+  target, but I've upgraded all my computers to Java 21. At least for this 
+  project, I had stuck to only using Java 8 features, but I wanted to use 
+ `Set.of()`, so I asked IntelliJ to move the compile source to the Java 9 level.
+  Do not use Java language features that have not yet made it into any long term 
+  support (LTS) release.
 * Use JUnit 5. Unfortunately this means you probably can't use Apache NetBeans
   for this project.
 * Build tool is Maven. Not my favorite, but IntelliJ IDEA deals with Maven
-  headaches well enough.
+  headaches well enough. Most of the time. Pull requests demanding to use any 
+  other build tool will be rejected as not helpful, however much better that 
+  build tool might be.
 * Column width is 80.
 * Prefer spaces to tabs. This might only be an issue for Eclipse users.
 * Opening curly braces should not go on lines by themselves. I do know that the
@@ -32,3 +38,5 @@ around.
   be actual movies that have been produced and released. If you "invent" a movie 
   to use as an example or a joke, it should be something that would be rated G, 
   PG, PG-13 or R if it was actually produced.
+* Don't wait for the final week of Hacktoberfest to make pull requests. I might 
+  simply ignore such a pull request.
