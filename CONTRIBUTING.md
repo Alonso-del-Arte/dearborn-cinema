@@ -1,4 +1,4 @@
-This project will be open to Hacktoberfest 2023. It started out as a project for
+This project will be open to Hacktoberfest 2024. It started out as a project for
 a training program. The rules below do not apply to my classmates from the
 training. But I doubt they'll be working on this by the time Hacktoberfest rolls
 around.
