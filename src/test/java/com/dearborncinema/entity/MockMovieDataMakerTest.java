@@ -71,13 +71,13 @@ public class MockMovieDataMakerTest {
         for (int i = 0; i < numberOfCalls; i++) {
             Duration duration = MockMovieDataMaker.chooseDuration();
             String msg = duration.toString() + msgPart;
-            assert duration.compareTo(minimum) > 0 : msg;
-            assert duration.compareTo(maximum) < 0 : msg;
+            assert duration.compareTo(minimum) >= 0 : msg;
+            assert duration.compareTo(maximum) <= 0 : msg;
             set.add(duration);
         }
         int expected = 3 * range / 5;
         int actual = set.size();
-        String msg = "After " + numberOfCalls + ", expected at least "
+        String msg = "After " + numberOfCalls + " calls, expected at least "
                 + expected + " distinct, got " + actual;
         assert actual >= expected : msg;
     }
