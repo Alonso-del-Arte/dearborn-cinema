@@ -46,6 +46,11 @@ public class MockMovieDataMaker {
     private static final int NUMBERS_OF_CHARACTER_NOUNS
             = CHARACTER_NOUNS.length;
 
+    private static final MPAARating[] AVAILABLE_RATINGS = {MPAARating.G,
+            MPAARating.PG, MPAARating.PG13, MPAARating.R, MPAARating.NC17};
+
+    private static final int NUMBER_OF_AVAILABLE_RATINGS = AVAILABLE_RATINGS.length;
+
     static final LocalDate LAST_FRIDAY = previous(LocalDate.now(), DayOfWeek.FRIDAY);
 
     public static String makeUpTitle() {
@@ -61,9 +66,16 @@ public class MockMovieDataMaker {
                 + characterNoun;
     }
 
-    // TODO: Write tests for this
+    /**
+     * Pseudorandomly chooses a rating that is currently used. The ratings GP, M
+     * and X are excluded from consideration.
+     * @return One of G, PG, PG-13, R or NC-17. However, note the last listed
+     * one will come up a lot more often in this context than it does in real
+     * life.
+     */
     public static MPAARating chooseRating() {
-        return MPAARating.UNRATED;
+        int index = RANDOM.nextInt(NUMBER_OF_AVAILABLE_RATINGS);
+        return AVAILABLE_RATINGS[index];
     }
 
     // TODO: Write tests for this
