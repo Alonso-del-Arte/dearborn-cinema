@@ -104,7 +104,7 @@ public class MockMovieDataMaker {
 
     // TODO: Write tests for this
     public static LocalDate choosePremiereDate() {
-        return LocalDate.now().plusDays(40);
+        return LocalDate.now().minusDays(40);
     }
 
     // TODO: Write tests for this
