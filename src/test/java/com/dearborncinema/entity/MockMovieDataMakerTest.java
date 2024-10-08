@@ -82,4 +82,13 @@ public class MockMovieDataMakerTest {
         assert actual >= expected : msg;
     }
 
+    @Test
+    void testPremiereDateIsInThePast() {
+        LocalDate today = LocalDate.now();
+        LocalDate premiereDate = MockMovieDataMaker.choosePremiereDate();
+        String msg = "Premiere date " + premiereDate
+                + " should be prior to today, " + today;
+        assert premiereDate.isBefore(today) : msg;
+    }
+
 }
