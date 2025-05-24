@@ -91,4 +91,20 @@ public class MockMovieDataMakerTest {
         assert premiereDate.isBefore(today) : msg;
     }
 
+    @Test
+    void testChoosePremiereDate() {
+        System.out.println("choosePremiereDate");
+        int capacity = RANDOM.nextInt(64) + 16;
+        Set<LocalDate> dates = new HashSet<>(capacity);
+        for (int i = 0; i < capacity; i++) {
+            dates.add(MockMovieDataMaker.choosePremiereDate());
+        }
+        int expected = 3 * capacity / 5;
+        int actual = dates.size();
+        String msg = "After asking for premiere date " + capacity
+                + " times, there should be at least " + expected
+                + " distinct, got " + actual;
+        assert actual >= expected : msg;
+    }
+
 }
