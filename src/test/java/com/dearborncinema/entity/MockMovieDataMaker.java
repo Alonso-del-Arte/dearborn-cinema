@@ -60,6 +60,11 @@ public class MockMovieDataMaker {
 
     static final LocalDate LAST_FRIDAY = previous(LocalDate.now(), DayOfWeek.FRIDAY);
 
+    public static final int NUMBER_OF_YEARS = 52;
+
+    private static final int NUMBER_OF_DAYS_IN_YEARS = 365 * NUMBER_OF_YEARS
+            + (NUMBER_OF_YEARS / 4);
+
     public static String makeUpTitle() {
         String franchise
                 = FRANCHISE_NAMES[RANDOM.nextInt(NUMBER_OF_FRANCHISES)];
@@ -102,9 +107,13 @@ public class MockMovieDataMaker {
         return Duration.ofMinutes(amount);
     }
 
-    // TODO: Write tests for this
+    /**
+     *
+     * @return
+     */
     public static LocalDate choosePremiereDate() {
-        return LocalDate.now().minusDays(40);
+        int daysToSubtract = RANDOM.nextInt(NUMBER_OF_DAYS_IN_YEARS);
+        return LocalDate.now().minusDays(daysToSubtract);
     }
 
     // TODO: Write tests for this
