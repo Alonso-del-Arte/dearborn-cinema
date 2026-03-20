@@ -1,5 +1,5 @@
-This project is now open to Hacktoberfest 2024. It started out as a project for
-a training program. The rules below do not apply to my classmates from the
+This project might be open to Hacktoberfest 2026. It started out as a project 
+for a training program. The rules below do not apply to my classmates from the
 training. But I doubt they'll be working on this by the time Hacktoberfest rolls
 around.
 
@@ -19,7 +19,9 @@ around.
   other build tool will be rejected as not helpful, however much better that 
   build tool might be.
 * Column width is 80.
-* Prefer spaces to tabs. This might only be an issue for Eclipse users.
+* Prefer spaces to tabs. This might only be an issue for Eclipse users, since 
+  the other major IDEs are configured to automatically indent with the 
+  appropriate number of spaces.
 * Opening curly braces should not go on lines by themselves. I do know that the
   Spring framework likes to put all curly braces on lines by themselves, so it's
   okay if it escapes your notice because Spring generated it that way.
@@ -38,5 +40,7 @@ around.
   be actual movies that have been produced and released. If you "invent" a movie 
   to use as an example or a joke, it should be something that would be rated G, 
   PG, PG-13 or R if it was actually produced.
+* Don't actively use "artificial intelligence" on this project. If you can't 
+  explain why something works, you should probably not be using it.
 * Don't wait for the final week of Hacktoberfest to make pull requests. I might 
   simply ignore such a pull request.
