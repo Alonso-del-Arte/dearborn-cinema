@@ -54,7 +54,19 @@ public class MockMovieDataMakerTest {
         assertEquals(expected, actual);
     }
 
-    // TODO: Write tests for makeUpRatingReason
+    /**
+     * Although some G rated movies have "fantasy violence" and such, for our
+     * purpose here it is sufficient to just have "all ages welcome" for all G
+     * rated movies.
+     */
+    @Test
+    void testMakeUpRatingReasonForGRatedMovie() {
+        String expected = "All ages welcome";
+        String actual = MockMovieDataMaker.makeUpRatingReason(MPAARating.G);
+        assertEquals(expected, actual);
+    }
+
+    // TODO: Write more tests for makeUpRatingReason
 
     // TODO: Rewrite this test to use org.testframe.api.Asserters.assertInRange()
     @Test
