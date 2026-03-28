@@ -97,7 +97,7 @@ public class MockMovieDataMaker {
 
     // TODO: Write tests for this
     public static String makeUpRatingReason(MPAARating rating) {
-        return "SORRY, NOT IMPLEMENTED YET";
+        return "All ages welcome";
     }
 
     /**
