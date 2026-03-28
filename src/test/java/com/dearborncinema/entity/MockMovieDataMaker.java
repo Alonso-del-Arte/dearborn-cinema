@@ -13,7 +13,7 @@ public class MockMovieDataMaker {
             "Back to the Present", "Cosmic Trek", "Cosmic Wars", "Dinosaurs",
             "Elastic Man", "Fast Vehicles", "Girl Wizard", "Sherlock Holmes",
             "Ionic Man", "Jokester", "Kern", "Lion Tamer", "Medal of Valor",
-            "Notung", "Outerborough", "Phantom Trapper", "Qualls of Destiny",
+            "Notung", "Outerborough", "Phantom Trapper", "Quails of Destiny",
             "Rural Detective", "Safe House", "Transforming Robots",
             "Under the Moon", "Vowel Thief", "Wild North", "Xenon Morphemes",
             "Young Sherlock Holmes", "Zoographer of Destiny"};
