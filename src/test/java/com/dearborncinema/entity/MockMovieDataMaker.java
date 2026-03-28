@@ -52,7 +52,7 @@ public class MockMovieDataMaker {
     private static final String[] RATING_REASONS = {"fantasy violence",
             "graphic violence", "mild nudity", "graphic nudity",
             "historical tobacco use", "suggestive dialogue",
-            "disturbing imagery"};
+            "disturbing imagery", "some scary moments"};
 
     private static final int NUMBER_OF_AVAILABLE_RATINGS = AVAILABLE_RATINGS.length;
 
