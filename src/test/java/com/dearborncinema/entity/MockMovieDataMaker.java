@@ -49,6 +49,11 @@ public class MockMovieDataMaker {
     private static final MPAARating[] AVAILABLE_RATINGS = {MPAARating.G,
             MPAARating.PG, MPAARating.PG13, MPAARating.R, MPAARating.NC17};
 
+    private static final String[] RATING_REASONS = {"fantasy violence",
+            "graphic violence", "mild nudity", "graphic nudity",
+            "historical tobacco use", "suggestive dialogue",
+            "disturbing imagery"};
+
     private static final int NUMBER_OF_AVAILABLE_RATINGS = AVAILABLE_RATINGS.length;
 
     private static final int FEATURE_FILM_MINIMUM_MINUTES = 77;
