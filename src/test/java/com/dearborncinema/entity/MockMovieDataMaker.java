@@ -96,6 +96,11 @@ public class MockMovieDataMaker {
     }
 
     // TODO: Write tests for this
+    public static MPAARating chooseRatingOtherThan(MPAARating rating) {
+        return rating;
+    }
+
+    // TODO: Write tests for this
     public static String makeUpRatingReason(MPAARating rating) {
         return "All ages welcome";
     }
