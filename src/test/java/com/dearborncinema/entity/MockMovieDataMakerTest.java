@@ -54,6 +54,29 @@ public class MockMovieDataMakerTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void testChooseRatingOtherThan() {
+        System.out.println("chooseRatingOtherThan");
+        Set<MPAARating> ratings = new HashSet<>(Set.of(MPAARating.G,
+                MPAARating.PG, MPAARating.PG13, MPAARating.R, MPAARating.NC17));
+        int numberOfCalls = 5 * ratings.size();
+        for (MPAARating rating : ratings) {
+            Set<MPAARating> expected = new HashSet<>(ratings);
+            expected.remove(rating);
+            Set<MPAARating> actual = new HashSet<>();
+            for (int i = 0; i < numberOfCalls; i++) {
+                MPAARating chosen
+                        = MockMovieDataMaker.chooseRatingOtherThan(rating);
+                String msg = "Choosing rating other than " + rating.toString()
+                        + " should not be that";
+                assert !rating.equals(chosen) : msg;
+                actual.add(chosen);
+            }
+            String message = "Choosing ratings other than " + rating.toString();
+            assertEquals(expected, actual, message);
+        }
+    }
+
     /**
      * Although some G rated movies have "fantasy violence" and such, for our
      * purpose here it is sufficient to just have "all ages welcome" for all G
