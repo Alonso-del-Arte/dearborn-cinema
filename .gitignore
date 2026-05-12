@@ -39,8 +39,6 @@ build/
 .DS_Store
 
 ### Miscellaneous ###
-draft/
-secrets/
 /src/main/java/draft/
 /src/main/java/secrets/
 /src/main/test/java/draft/
