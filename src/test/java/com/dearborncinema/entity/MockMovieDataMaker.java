@@ -95,9 +95,12 @@ public class MockMovieDataMaker {
         return AVAILABLE_RATINGS[index];
     }
 
-    // TODO: Write tests for this
     public static MPAARating chooseRatingOtherThan(MPAARating rating) {
-        return rating;
+        MPAARating choice = rating;
+        while (rating.equals(choice)) {
+            choice = chooseRating();
+        }
+        return choice;
     }
 
     // TODO: Write tests for this
