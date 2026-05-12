@@ -39,10 +39,10 @@ build/
 .DS_Store
 
 ### Miscellaneous ###
-/src/main/java/draft/
-/src/main/java/secrets/
-/src/main/test/java/draft/
-/src/main/test/java/secrets/
+src/main/java/draft/
+src/main/java/secrets/
+src/test/java/draft/
+src/test/java/secrets/
 localdevicenotes.txt
 scratchpad.txt
 tempnotes.html
