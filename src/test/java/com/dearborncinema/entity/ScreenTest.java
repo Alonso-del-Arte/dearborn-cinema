@@ -72,10 +72,6 @@ class ScreenTest {
         assert opResult : msg;
     }
 
-    // TODO: Uncomment out the following lines after the next commit
-//    @Test
-//    void testSchedulingConflictOtherMovieStillPlaying() {
-//        fail("Resume work here");
-//    }
+    // TODO: Test for scheduling conflicts
 
 }
