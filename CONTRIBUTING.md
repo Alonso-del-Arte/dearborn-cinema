@@ -1,9 +1,10 @@
-This project might be open to Hacktoberfest 2026. It started out as a project 
-for a training program. The rules below do not apply to my classmates from the
-training. But I doubt they'll be working on this by the time Hacktoberfest rolls
-around.
+This project will be open to Hacktoberfest 2026.
 
-# Rules for Hacktoberfest contributors
+It started out as a project for a training program. The rules below do not apply 
+to my classmates from the training. But I doubt they'll be working on this by 
+the time Hacktoberfest rolls around.
+
+# Rules for Hacktoberfest 2026 contributors
 
 * Be sure to fork from the original and not from a fork.
 * This started out as a Java 8 project, both for compile source and compile 
@@ -42,5 +43,5 @@ around.
   PG, PG-13 or R if it was actually produced.
 * Don't actively use "artificial intelligence" on this project. If you can't 
   explain why something works, you should probably not be using it.
-* Don't wait for the final week of Hacktoberfest to make pull requests. I might 
-  simply ignore such a pull request.
+* Don't wait for the final week of Hacktoberfest to make pull requests. I will 
+  ignore such pull requests.
